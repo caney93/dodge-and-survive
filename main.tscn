@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cxyecfrelmrcy" path="res://player.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://dd7igkrarh2wh" path="res://player.gd" id="2_h2yge"]
 
-[node name="Node2D" type="Node2D" unique_id=398554036]
+[node name="Main" type="Node2D" unique_id=398554036]
 
-[node name="Area2D" parent="." unique_id=2136809112 instance=ExtResource("1_0xm2m")]
+[node name="Player" parent="." unique_id=2136809112 instance=ExtResource("1_0xm2m")]
 position = Vector2(580, 350)
 script = ExtResource("2_h2yge")
