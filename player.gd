@@ -13,6 +13,7 @@ func _process(delta):
 	if Input.is_action_pressed("ui_up"):
 		direction.y -= 1
 	position += direction.normalized() * speed * delta
+	position = position.clamp(Vector2(0, 20), Vector2(1132, 628))
 
 
 func _on_area_entered(area: Area2D) -> void:
