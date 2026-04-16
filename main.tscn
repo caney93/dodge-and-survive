@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://diqmyg1glkinm"]
 
 [ext_resource type="PackedScene" uid="uid://cxyecfrelmrcy" path="res://player.tscn" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://dd7igkrarh2wh" path="res://player.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://dnea8yhth5xbk" path="res://main.gd" id="1_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=398554036]
+script = ExtResource("1_h2yge")
 
 [node name="Player" parent="." unique_id=2136809112 instance=ExtResource("1_0xm2m")]
 position = Vector2(580, 350)
-script = ExtResource("2_h2yge")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1547916493]
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
