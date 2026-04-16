@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dgn0rtilciv04"]
+
+[ext_resource type="Script" uid="uid://c0rs8ukxxk0td" path="res://game_over.gd" id="1_y26ei"]
+
+[node name="Game_Over" type="Node2D" unique_id=1534610450]
+script = ExtResource("1_y26ei")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1162262566]
+offset_left = 400.0
+offset_top = 200.0
+offset_right = 492.0
+offset_bottom = 223.0
+theme_override_font_sizes/font_size = 64
+text = "Game Over!"
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=164208666]
+offset_left = 405.0
+offset_top = 298.0
+offset_right = 526.0
+offset_bottom = 343.0
+theme_override_font_sizes/font_size = 32
+text = "Score: 0"
+
+[node name="RestartButton" type="Button" parent="." unique_id=551497623]
+offset_left = 554.0
+offset_top = 412.0
+offset_right = 632.0
+offset_bottom = 443.0
+text = "Nochmal"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
