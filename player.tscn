@@ -1,21 +1,17 @@
 [gd_scene format=3 uid="uid://cxyecfrelmrcy"]
 
 [ext_resource type="Script" uid="uid://dd7igkrarh2wh" path="res://player.gd" id="1_4flbx"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
-size = Vector2(39, 39)
+[ext_resource type="Texture2D" uid="uid://bywqkpbufc1fn" path="res://Assets/green.png" id="2_onrkg"]
 
 [node name="Player" type="Area2D" unique_id=2136809112]
 script = ExtResource("1_4flbx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=300605291]
-shape = SubResource("RectangleShape2D_7dm0k")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=156516657]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_onrkg")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=317156734]
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-metadata/_edit_use_anchors_ = true
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2034350267]
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(-30, -60, -50, -60, -50, -58.3, -52, -57.2, -52, -51.5, -57.1, -50, -60, -50, -60, -36, -64, -36, -64, -12, -60, -12, -60, 12, -64, 12, -64, 36, -60, 36, -60, 48.800003, -56.8, 52, -51.5, 52, -50, 57, -50, 60.199997, -28, 57.800003, -28, 52, -26, 57, -26, 60, 25.599998, 60, 27.5, 52, 28.5, 52, 30.400002, 60, 48.800003, 60, 52, 56.800003, 52, 51.4, 57.1, 50, 60, 50, 60, 36, 64, 36, 64, 12, 60, 12, 60, -12, 64, -12, 64, -36, 60, -36, 60, -48.8, 56.800003, -52, 51.5, -52, 50, -57, 50, -60, 31.199997, -60, 28, -56.8, 28, -51.6, 20, -49.6, 20, -43.8, 4, -41.8, 4, -36, -4.5, -36, -6.4000015, -44, -20, -44, -20, -48.8, -23.2, -52, -28.5, -52, -30, -57)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

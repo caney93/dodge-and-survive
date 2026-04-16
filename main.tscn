@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cxyecfrelmrcy" path="res://player.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://dnea8yhth5xbk" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bye6m3602xbpw" path="res://Assets/space.jpg" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=398554036]
 script = ExtResource("1_h2yge")
@@ -19,5 +20,11 @@ offset_top = 20.0
 offset_right = 60.0
 offset_bottom = 43.0
 theme_override_font_sizes/font_size = 32
+
+[node name="Space" type="Sprite2D" parent="." unique_id=1538799441]
+show_behind_parent = true
+position = Vector2(569, 344)
+scale = Vector2(0.7194039, 0.7194039)
+texture = ExtResource("3_h2yge")
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
